@@ -40,7 +40,7 @@ const getBookings = async (req, res) => {
 
 //PUT (using ID)
 const updateBookings = async (req, res) =>{
-    const bookingId = req.params.bookingId;
+    const bookingId = req.params.id;
         const { patientName } = req.body;
         const { date } = req.body;
         const { time } = req.body;
@@ -48,7 +48,7 @@ const updateBookings = async (req, res) =>{
         const { bookingMade } = req.body;
 
         try{
-            const updateApt = await booking.updateOne(
+            const updateApt = await booking.findByIdAndUpdate(
                 {_id: bookingId},
                 {
                     $set: {
