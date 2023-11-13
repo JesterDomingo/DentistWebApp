@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import logo from "./DentalLogo.png";
+
+import "./App.css";
 
 function App() {
     const [appointments, setAppointments] = useState([]);
@@ -50,7 +53,7 @@ function App() {
             dentistName: appointment.dentistName,
         });
     };
-      //Update
+      //PUT
     const handleUpdateAppointment = () => {
         axios.put(`http://localhost:5000/appointments/${editAppointment._id}`, newAppointment)
             .then(response => {
@@ -79,7 +82,7 @@ function App() {
     //----------------------------------------------------------
     return (
         <div>
-            <h1>Dentist Appointment Booking</h1>
+            <img src={logo} alt="logo" className='logo'/><h1>Dentist Appointment Booking</h1>
             <div>
                 <h2>Appointments Dashboard</h2>
                 <ul>
