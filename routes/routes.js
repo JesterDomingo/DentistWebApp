@@ -4,12 +4,12 @@ router = express.Router();
 
 
 //GET FUNCTIONS
-router.get("/appointments", getBookings);
+router.get("/showappointments", getBookings);
 //POST FUNCTIONS
-router.post("/bookappointments", addAppointment);
+router.post("/bookappointment", addAppointment);
 //PUT FUNCTIONS
 router.put("/:id", updateBookings) //not yet working
 //DELETE FUNCTIONS
-router.delete("/deleteappointments/:id", deleteBooking)
+router.delete("/deleteappointment/:id", deleteBooking)
 
 module.exports = router
