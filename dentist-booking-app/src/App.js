@@ -82,13 +82,64 @@ function App() {
     //----------------------------------------------------------
     return (
         <div>
-            <img src={logo} alt="logo" className='logo'/><h1>Dentist Appointment Booking</h1>
-            <div>
+            <div id="main-header">
+                <img src={logo} alt="logo" className='logo'/>
+                <h1>Dentist Appointment Booking</h1>
+            </div>
+            <div id="main-body">
+                <div class="left-side-div">
+                    <h2>{editAppointment ? 'Update Appointment' : 'Add Appointment'}</h2>
+                    <form>
+                        <label>Patient Name: </label>
+                        <input
+                            type="text"
+                            name="patientName"
+                            value={newAppointment.patientName}
+                            onChange={handleInputChange}
+                            />
+                        <label>Date: </label>
+                        <input
+                            type="date"
+                            name="date"
+                            value={newAppointment.date}
+                            onChange={handleInputChange}
+                        />
+                        <label>Time: </label>
+                        <input
+                            type="text"
+                            name="time"
+                            value={newAppointment.time}
+                            onChange={handleInputChange}
+                        />
+                        <label>Dentist Name: </label>
+                        <input
+                            type="text"
+                            name="dentistName"
+                            value={newAppointment.dentistName}
+                            onChange={handleInputChange}
+                        />
+                        <button type="submit" onClick={editAppointment ? handleUpdateAppointment : handleAddAppointment}>
+                            {editAppointment ? 'Update Appointment' : 'Add Appointment'}
+                        </button>
+                    </form>
+                </div>
+            <div class="right-side-div">
                 <h2>Appointments Dashboard</h2>
                 <ul>
                     {appointments.map(appointment => (
                         <li key={appointment._id}>
-                            {`Patient: ${appointment.patientName}, Date: ${appointment.date}, Time: ${appointment.time}, Dentist: ${appointment.dentistName}`}
+                            <span>
+                                {`Patient: ${appointment.patientName}`}
+                            </span>
+                            <span>
+                                {`Date: ${appointment.date}`}
+                            </span>
+                            <span>
+                                {`Time: ${appointment.time}`}
+                            </span>
+                            <span>
+                                {`Dentist: ${appointment.dentistName}`}
+                            </span>
                             <button onClick={() => handleEditAppointment(appointment)}>
                                 Edit
                             </button>
@@ -97,43 +148,11 @@ function App() {
                             </button>
                         </li>
                     ))}
-                </ul>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h2>{editAppointment ? 'Update Appointment' : 'Add Appointment'}</h2>
-                <form>
-                    <label>Patient Name:</label>
-                    <input
-                        type="text"
-                        name="patientName"
-                        value={newAppointment.patientName}
-                        onChange={handleInputChange}
-                    />
-                    <label>Date:</label>
-                    <input
-                        type="date"
-                        name="date"
-                        value={newAppointment.date}
-                        onChange={handleInputChange}
-                    />
-                    <label>Time:</label>
-                    <input
-                        type="text"
-                        name="time"
-                        value={newAppointment.time}
-                        onChange={handleInputChange}
-                    />
-                    <label>Dentist Name:</label>
-                    <input
-                        type="text"
-                        name="dentistName"
-                        value={newAppointment.dentistName}
-                        onChange={handleInputChange}
-                    />
-                    <button type="button" onClick={editAppointment ? handleUpdateAppointment : handleAddAppointment}>
-                        {editAppointment ? 'Update Appointment' : 'Add Appointment'}
-                    </button>
-                </form>
+            <div id="main-footer">
+            <h5>©  Copyright Group 9 - Web Application - Fall 2023</h5>
             </div>
         </div>
     );
