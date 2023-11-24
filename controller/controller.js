@@ -75,9 +75,9 @@ const updateBookings = async (req, res) =>{
 
 //DELETE (using ID)
 const deleteBooking = async (req, res) => {
-    const bookingId = req.params.bookingId;
+    const bookingId = req.params.id;
     try{
-        const Booking = await booking.deleteOne({name: bookingId});
+        const Booking = await booking.deleteOne({_id: bookingId});
         res.status(200).json({success: true, data: Booking});
     } catch (error){
         res

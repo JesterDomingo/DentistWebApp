@@ -8,8 +8,8 @@ router.get("/showappointments", getBookings);
 //POST FUNCTIONS
 router.post("/bookappointment", addAppointment);
 //PUT FUNCTIONS
-router.put("/:id", updateBookings) //not yet working
+router.put("/:id", updateBookings);
 //DELETE FUNCTIONS
-router.delete("/deleteappointment/:id", deleteBooking)
+router.delete("/deleteappointment/:id", deleteBooking);
 
 module.exports = router

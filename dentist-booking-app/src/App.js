@@ -14,9 +14,7 @@ function App() {
     });
     const [editAppointment, setEditAppointment] = useState(null);
 
-    useEffect(() => {
-        fetchAppointments();
-    }, []);
+    useEffect(() => {fetchAppointments();}, []);
       //GET
     const fetchAppointments = () => {
         axios.get('http://localhost:5000/appointments/showappointments')
