@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const api = require("./routes/routes")
+const auth = require("./routes/auth")
 require("dotenv/config")
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use("/appointments", api)
+app.use("/auth", auth); 
 app.get("/", (req, res) => {
     res.send("Dentist Web App")
 })
