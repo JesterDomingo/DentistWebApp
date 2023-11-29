@@ -1,62 +1,78 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { toast } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import Header from "../components/header";
+import Footer from "../components/footer";
 
-const RegistrationForm = () => {                         //REGISTER LOGIC DOES NOT WORK, IDK IF LOGIN WORKS TOO...
-  const navigate = useNavigate();                        //IF YOU WANT TO ACCESS THE BOOKING GO http://localhost:3000/dashboard
-  const [ data, setData] = useState({
-    username: '',
+const Register = () => {
+  const navigate = useNavigate();
+  const [user, setUser] = useState({
+    name: '',
     email: '',
     password: '',
-  })
-    const registerUser = async (e)=>{
-        e.preventDefault()
-        const {name, email, password} = data
-        try{
-          const {data} = await axios.post('/signup', {
-            name, email, password
-          })
-        if(data.error){
-          toast.error(data.error)
-        } else{
-          setData({})
-          toast.success('Login Successful, Welcome')
-          navigate('/login')
-        }
-        } catch (error) {
-            console.log(error)
-        }
-    }
+  });
 
-    return (
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/auth/signup', user);
+
+      if (response.data.success) {
+        console.log('Registration successful');
+        navigate.push('/login');
+      } else {
+        console.error('Registration failed:', response.data.message);
+      }
+    } catch (error) {
+      console.error('Error during registration:', error.message);
+    }
+  };
+
+  return (
     <div>
-      <form onSubmit={registerUser}>
-        <label>Name:</label>
-        <input
-          type="text"
-          placeholder="name"
-          value = {data.name}
-          onChange={(e) => setData({...data, name: e.target.value})}
-        />
-        <label>Email:</label>
-        <input
-          type="text"
-          placeholder="email"
-          value = {data.email}
-          onChange={(e) => setData({...data, email: e.target.value})}
-        />
-        <label>Password:</label>
-        <input
-          type="password"
-          placeholder="password"
-          value = {data.password}
-          onChange={(e) => setData({...data, password: e.target.value})}
-        />
-        <button type="submit">Register</button>
+      <Header></Header>
+      <h2>Join us</h2>
+      <h5>Create your personal account</h5>
+      <form onSubmit={handleRegister}>
+        <p>
+          <label>Name</label><br />
+          <input type="text" name="name" required onChange={handleChange} />
+        </p>
+        <p>
+          <label>Email address</label><br />
+          <input type="email" name="email" required onChange={handleChange} />
+        </p>
+        <p>
+          <label>Password</label><br />
+          <input type="password" name="password" required onChange={handleChange} />
+        </p>
+        <p>
+          <input type="checkbox" name="checkbox" id="checkbox" required />{' '}
+          <span>
+            I agree all statements in{' '}
+            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+              terms of service
+            </a>
+            .
+          </span>
+        </p>
+        <p>
+          <button id="sub_btn" type="submit">Register</button>
+        </p>
       </form>
+      <footer>
+        <p>
+          Already have an account?<Link to="/login">Click Here</Link>.
+        </p>
+      </footer>
+      <Footer></Footer>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default Register;
