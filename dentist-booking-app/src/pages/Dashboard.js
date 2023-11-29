@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [appointments, setAppointments] = useState([]);
   const [newAppointment, setNewAppointment] = useState({
     patientName: "",
@@ -13,6 +16,13 @@ const Dashboard = () => {
     dentistName: "",
   });
   const [editAppointment, setEditAppointment] = useState(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/', { state: { message: 'Please log in to access the dashboard' } });
+    }
+  }, [navigate]);
 
   useEffect(() => {
     fetchAppointments();
@@ -94,6 +104,13 @@ const Dashboard = () => {
         console.error("Error deleting appointment:", error.response.data)
       );
   };
+
+  //LOGOUT
+  const handleLogout = () => {
+    localStorage.removeItem('token'); //token clear
+    navigate('/', { state: { message: 'Successfully logged out' } });
+  };
+  
   return (
     <div>
       <Header></Header>
@@ -161,6 +178,9 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
+      <div className="logout-button">
+          <button onClick={handleLogout}>Logout</button>
+        </div>
       <Footer></Footer>
     </div>
   );
