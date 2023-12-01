@@ -1,0 +1,26 @@
+/* Homepage.css */
+
+/* General styling */
+section {
+    margin-bottom: 20px;
+  }
+  
+  /* Testimonial styling */
+  .testimonial-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .testimonial {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .rating {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #ffcc00; /* Adjust the color of the stars */
+  }
+  
