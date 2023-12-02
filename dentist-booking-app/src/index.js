@@ -6,6 +6,9 @@ import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import AboutUs from "./pages/AboutUs";
+import Services from "./pages/Services";
+import ContactUs from "./pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "aboutus",
+    element: <AboutUs />,
+  },
+  {
+    path: "services",
+    element: <Services />,
+  },
+  {
+    path: "contactus",
+    element: <ContactUs />,
   },
 ]);
 

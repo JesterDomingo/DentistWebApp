@@ -5,9 +5,9 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Homepage from './pages/Homepage'
 import Dashboard from './pages/Dashboard'
-import About from './pages/AboutUs'
+import Aboutus from './pages/AboutUs'
 import Services from './pages/Services'
-import Contact from './pages/ContactUs'
+import Contactus from './pages/ContactUs'
 import { Toaster } from 'react-hot-toast;'
 import "./App.css";
 
@@ -18,9 +18,9 @@ function App() {
            <BrowserRouter>
                 <Routes>
                     <Route index element={<Homepage/>} />
-                    <Route path="/about" element={<AboutUs/>} />
+                    <Route path="/aboutus" element={<AboutUs/>} />
                     <Route path="/services" element={<Services/>} />
-                    <Route path="/contact" element={<ContactUs />} />
+                    <Route path="/contactus" element={<ContactUs />} />
                     <Route path="/login" element ={<Login/>} />
                     <Route path="/signup" element ={<Register/>} />
                     <Route path="/dashboard" element ={<Dashboard/>} />
