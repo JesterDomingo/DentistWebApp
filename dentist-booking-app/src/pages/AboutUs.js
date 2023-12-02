@@ -1,16 +1,20 @@
 import React from 'react';
-import Header from '../components/header';
 import Footer from '../components/footer';
+import Header from '../components/header';
 import './About.css'; // Create a new CSS file for styles
 import AboutusBanner from '../images/AboutusBanner.gif'; // Adjust the import path based on your project structure
 
 const About = () => {
   return (
-    <div className="about-container">
-      {/* Styling for the About Us Banner GIF */}
-      <div className="banner-container">
-        <img src={AboutusBanner} alt="About Us Banner" className="banner-image" />
-      </div>
+    <div>
+      <Header /> {/* Include the Header component here */}
+
+      <section className="banner-section" style={{ backgroundImage: `url(${AboutusBanner})` }}>
+        <div className="banner-content">
+          <h2>About Us</h2>
+          {/* Add your banner content here */}
+        </div>
+      </section>
 
       <div className="content-box">
         <p className="section-title">Key Features:</p>

@@ -24,3 +24,40 @@ section {
     color: #ffcc00; /* Adjust the color of the stars */
   }
   
+  /* Add general styles for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style for the banner section with background image */
+.banner-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Style for the content within the banner section */
+.banner-content {
+  max-width: 80%;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Chart.css */
+
+/* Style for the star rating chart */
+#starChart {
+  max-width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

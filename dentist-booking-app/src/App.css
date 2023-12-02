@@ -209,17 +209,23 @@ body{
 
 /*NEW PAGES CREATED */
 /* App.css */
-.header-container {
-  background: #0000;
-  padding: 10px;
+
+body, html {
+  height: 100%;
+  margin-right: 100;
 }
 
 .header-content {
   display: flex;
+  background-color: rgb(255, 255, 255);
   align-items: center;
   justify-content: space-between;
-  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%; /* Set the width to 100% to make it full width */
+  padding: 20px; /* Add padding if needed */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
+
 
 .logo-container {
   display: flex;
@@ -227,48 +233,79 @@ body{
 }
 
 .logo {
-  margin-left: -500px; /* Adjust margin as needed */
+  margin-top: 15px;
+  margin-left: -550px; /* Adjust margin as needed */
 }
 
-/* App.css */
-/* ... (other styles) */
+header {
+  background-color: #333; /* Choose your desired background color */
+  color: #fff; /* Choose your desired text color */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Make the header full width */
+}
+
+.header-content {
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-between;
+  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+  padding-left: 10px; /* Adjust padding for space between the border and content */
+}
+
+h1-container {
+  background-color: #85a6ee;
+  margin-left: auto;
+  margin-top: auto;
+}
 
 h1 {
-  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your Desired Font' with the actual font name */
-  margin-left: -240px;
-  font-size: 50px; /* Adjust font size as needed */
+  margin-top: auto;
+  margin-left: -290px;
+  font-size: 55px; /* Adjust font size as needed */
 }
 
-/* Style specifically for the h1 in the logo-container */
-.logo-container h1 {
-  font-family: 'Your New Font', sans-serif; /* Replace 'Your New Font' with the desired font for the h1 in the logo-container */
-  /* You can also adjust other styles for this h1 if needed */
+.nav-list-container {
+  display: flex;
+  align-items: first baseline;
 }
 
 .nav-list {
   list-style-type: none;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
+  margin-inline-start: 1cm;
+  margin-right: 5px;
   font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font name */
-  font-size: 20px; /* Adjust font size as needed */
-  margin-right: 50px; /* Adjust margin as needed */
+  font-size: 30px; /* Adjust font size as needed */
 }
-
-/* App.css */
-/* ... (other styles) */
 
 .book-now-button {
   text-decoration: none;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
   background-color: #3498db; /* Use your desired background color */
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 5px; /* Add border radius for a rounded button */
-  margin-left: auto; /* Push the button to the right */
+  transition: background-color 0.3s ease;
+  margin-right: auto; /* Push the button to the right */
 }
 
-/* Adjust the styles according to your design preferences */
+.login-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

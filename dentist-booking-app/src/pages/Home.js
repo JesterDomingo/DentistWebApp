@@ -1,50 +1,37 @@
 // Homepage.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './Homepage.css'; // Update the import path
 import bannerGIF from '../images/HomepageBanner.gif'; // Adjust the relative path based on your project structure
-import Chart from 'chart.js/auto';
 
 const Homepage = () => {
-  useEffect(() => {
-    // Create a simple star rating chart
-    const ctx = document.getElementById('starChart');
-
-    if (ctx) {
-      const starData = [5, 4, 3, 5, 5]; // Replace this with your actual star ratings data
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Testimonial 1', 'Testimonial 2', 'Testimonial 3', 'Testimonial 4', 'Testimonial 5'],
-          datasets: [{
-            label: 'Stars',
-            data: starData,
-            backgroundColor: 'rgba(255, 206, 86, 0.7)', // Adjust color as needed
-            borderColor: 'rgba(255, 206, 86, 1)',
-            borderWidth: 1,
-          }],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 5, // Adjust based on your rating scale
-            },
-          },
-        },
-      });
-    }
-  }, []);
-
   return (
     <div>
       <Header />
 
-      {/* Banner Section */}
-      <section className="banner-section" style={{ backgroundImage: `url(${bannerGIF})` }}>
-        <div className="banner-content">
+      Banner Section
+      <section
+        style={{
+          background: `url(${bannerGIF}) center/cover no-repeat`,
+          height: '100vh', // Set height to 100% of the viewport height
+          width: '100%',   // Set width to 100% of the viewport width
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '80%',  // Set maximum width for larger screens
+            width: '100%',    // Set width to 100% of the viewport width
+            padding: '20px',
+            textAlign: 'center',
+            color: '#fff',
+          }}
+        >
+          <h2>Banner Section</h2>
           {/* Add your banner content here */}
         </div>
       </section>
@@ -84,12 +71,6 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Star Rating Chart */}
-      <section>
-        <h2>Stars Average</h2>
-        <canvas id="starChart" width="400" height="200"></canvas>
-      </section>
-
       {/* Live Map Section */}
       <section>
         <h2>Live Map Section</h2>
@@ -106,10 +87,11 @@ const Homepage = () => {
           />
         </div>
       </section>
-    <Footer></Footer>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };
- {/* Footer Section */}
- <Footer />
+
 export default Homepage;

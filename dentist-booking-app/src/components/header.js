@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header-content">
         <div className="logo-container">
           <img src={logo} alt="logo" className='logo' />
-          <h1>Smile Reborn Dental Clinic</h1>
+          <h1>Smile Reborn</h1>
         </div>
         
         {/* Navigation buttons */}
@@ -31,6 +31,11 @@ const Header = () => {
           </ul>
         </nav>
 
+        {/* Log in button */}
+        <div>
+          <Link to="/login" className="login-button">Log in</Link>
+        </div>
+        
         {/* Book Now button */}
         <div>
           <Link to="/book-now" className="book-now-button">
