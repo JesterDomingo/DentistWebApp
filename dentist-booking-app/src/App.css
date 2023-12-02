@@ -208,3 +208,67 @@ body{
 
 
 /*NEW PAGES CREATED */
+/* App.css */
+.header-container {
+  background: #0000;
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: -500px; /* Adjust margin as needed */
+}
+
+/* App.css */
+/* ... (other styles) */
+
+h1 {
+  font-family: 'Your Desired Font', Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+  margin-left: -240px;
+  font-size: 50px; /* Adjust font size as needed */
+}
+
+/* Style specifically for the h1 in the logo-container */
+.logo-container h1 {
+  font-family: 'Your New Font', sans-serif; /* Replace 'Your New Font' with the desired font for the h1 in the logo-container */
+  /* You can also adjust other styles for this h1 if needed */
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+  font-size: 20px; /* Adjust font size as needed */
+  margin-right: 50px; /* Adjust margin as needed */
+}
+
+/* App.css */
+/* ... (other styles) */
+
+.book-now-button {
+  text-decoration: none;
+  color: white;
+  background-color: #3498db; /* Use your desired background color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 5px; /* Add border radius for a rounded button */
+  margin-left: auto; /* Push the button to the right */
+}
+
+/* Adjust the styles according to your design preferences */
