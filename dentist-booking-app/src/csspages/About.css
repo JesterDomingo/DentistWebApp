@@ -1,0 +1,91 @@
+/* About.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 35px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.about-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content-box {
+  background-color: #bce3e8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 35px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 35px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature-list img {
+  max-width: 100%;
+  border-radius: 12px; /* Increased border-radius for a more rounded look */
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1); /* Increased box shadow for a lifted effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-list img:hover {
+  transform: scale(1.1);
+}
+
+.feature-description {
+  font-size: 18px; /* Increased font size for feature descriptions */
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Footer styles (adjust as needed) */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* About.css */
+
+/* Add this style to center the content within the banner-content-box */
+.banner-content-box {
+  text-align: center;
+}
+
+/* Remove bullets and adjust list styles */
+.banner-content-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Align the text to the left within the list */
+}

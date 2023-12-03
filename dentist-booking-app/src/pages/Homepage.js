@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import './Homepage.css'; // Update the import path
+import '../csspages/Homepage.css'; // Update the import path
 import bannerGIF from '../images/HomepageBanner.gif'; // Adjust the relative path based on your project structure
 import Chart from 'chart.js/auto';
 
