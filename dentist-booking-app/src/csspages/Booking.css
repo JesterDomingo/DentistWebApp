@@ -1,0 +1,77 @@
+/* Booking.css */
+
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #3498db;
+}
+
+.date-time-picker {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* Styling for the react-calendar component */
+.react-calendar {
+  max-width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.react-calendar__tile--active {
+  background: #f0f0f0;
+  color: #fff;
+}
+
+/* Styling for react-datepicker component */
+.react-datepicker-wrapper {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker {
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Button styles */
+button {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+/* Success message styles */
+.success-message {
+  color: #27ae60;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
