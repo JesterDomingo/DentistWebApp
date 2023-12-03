@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 //import BookNow from "/pages/BookNow";
@@ -10,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
+import Booking from "./pages/Booking";
 
 const router = createBrowserRouter([
   {
@@ -40,10 +40,10 @@ const router = createBrowserRouter([
     path: "contactus",
     element: <ContactUs />,
   },
-  // {
-  //   path: "booknow",
-  //   element: <BookNow />,
-  // },
+  {
+    path: "booking",
+    element: <Booking />,
+  },
 ]);
 
 const root = createRoot(document.getElementById("root"));

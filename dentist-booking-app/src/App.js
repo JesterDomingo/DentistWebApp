@@ -10,6 +10,7 @@ import Services from './pages/Services'
 import Contactus from './pages/ContactUs'
 import { Toaster } from 'react-hot-toast;'
 import "./App.css";
+import Booking from './pages/Booking';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/services" element={<Services/>} />
                     <Route path="/contactus" element={<ContactUs />} />
                     <Route path="/login" element ={<Login/>} />
+                    <Route path="/booking" element ={<Booking/>} />
                     <Route path="/signup" element ={<Register/>} />
                     <Route path="/dashboard" element ={<Dashboard/>} />
                 </Routes>

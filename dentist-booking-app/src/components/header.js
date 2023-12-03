@@ -12,7 +12,6 @@ const Header = () => {
           <img src={logo} alt="logo" className='logo' />
           <h1>Smile Reborn</h1>
         </div>
-        
         {/* Navigation buttons */}
         <nav className="navbar">
           <ul className="nav-list">
@@ -38,8 +37,8 @@ const Header = () => {
         
         {/* Book Now button */}
         <div>
-          <Link to="/book-now" className="book-now-button">
-            Book Now
+          <Link to="/booking"><button className="Booking">
+            Book Now</button>
           </Link>
         </div>
       </div>

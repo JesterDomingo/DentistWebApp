@@ -55,4 +55,18 @@
   button:hover {
     background-color: #333;
   }
-  
+  /* Additional styles for ContactUs.css */
+
+/* Success message styles */
+.success-message {
+  color: #27ae60;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 50px;
+  background-color: #ecf0f1;
+  border: 1px solid #2ecc71;
+  border-radius: 5px;
+}
+
+/* Adjust styles as needed */

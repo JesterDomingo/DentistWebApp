@@ -1,6 +1,5 @@
 // Homepage.js
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import '../csspages/Homepage.css'; // Update the import path
@@ -61,19 +60,19 @@ const Homepage = () => {
 
         {/* Testimonial 2 */}
         <div className="testimonial">
-          <p>Another testimonial content.</p>
+          <p>Very Clean clinic.</p>
           <div className="rating">★★★★☆</div>
         </div>
 
         {/* Testimonial 3 */}
         <div className="testimonial">
-          <p>One more testimonial content.</p>
+          <p>Skilled team, fantastic experience..</p>
           <div className="rating">★★★☆☆</div>
         </div>
 
         {/* Testimonial 4 */}
         <div className="testimonial">
-          <p>Yet another testimonial content.</p>
+          <p>Exceptional service, highly recommended.</p>
           <div className="rating">★★★★★</div>
         </div>
 
@@ -89,7 +88,6 @@ const Homepage = () => {
         <h2>Stars Average</h2>
         <canvas id="starChart" width="400" height="200"></canvas>
       </section>
-
       {/* Live Map Section */}
       <section>
         <h2>Live Map Section</h2>
@@ -110,6 +108,5 @@ const Homepage = () => {
     </div>
   );
 };
- {/* Footer Section */}
  <Footer />
 export default Homepage;
