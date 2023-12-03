@@ -5,12 +5,11 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Homepage from './pages/Homepage'
 import Dashboard from './pages/Dashboard'
-import Aboutus from './pages/AboutUs'
 import Services from './pages/Services'
-import Contactus from './pages/ContactUs'
+import Booking from './pages/Booking';
 import { Toaster } from 'react-hot-toast;'
 import "./App.css";
-import Booking from './pages/Booking';
+
 
 function App() {
     return (

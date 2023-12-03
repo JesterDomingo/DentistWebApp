@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
-//import BookNow from "/pages/BookNow";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import AboutUs from "./pages/AboutUs";

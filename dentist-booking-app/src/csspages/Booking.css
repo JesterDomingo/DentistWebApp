@@ -25,13 +25,13 @@ label {
   max-width: 100%;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: 1px solid #fffefe;
   border-radius: 5px;
 }
 
 .react-calendar__tile--active {
-  background: #f0f0f0;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
 }
 
 /* Styling for react-datepicker component */
