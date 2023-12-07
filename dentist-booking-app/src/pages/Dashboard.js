@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [appointments, setAppointments] = useState([]);
   const [newAppointment, setNewAppointment] = useState({

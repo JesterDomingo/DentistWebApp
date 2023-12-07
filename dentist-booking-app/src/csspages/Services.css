@@ -1,0 +1,31 @@
+/* Services.css */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-box {
+  border: 2px solid #000;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.service-item {
+  margin-top: 20px;
+  font-weight: black;
+}
+
+.service-item h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.service-item p {
+  font-size: 35px;
+  line-height: 1.5;
+}
