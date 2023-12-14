@@ -8,10 +8,20 @@ const Header = () => {
   return (
     <div id="main-header" className="header-container">
       <div className="header-content">
-        <div className="logo-container">
-          <img src={logo} alt="logo" className='logo' />
-          <h1>Smile Reborn</h1>
+        <div class="upper-header">
+           {/* Log in button */}
+          <div class="divider-class">
+          <Link to="/login"> <button className="login-button">Log in</button></Link>
+          </div>
+        
+          {/* Book Now button */}
+          {/* <div class="divider-class">
+            <Link to="/booking"><button className="Booking">
+              Book Now</button>
+            </Link>
+          </div> */}
         </div>
+       
         {/* Navigation buttons */}
         <nav className="navbar">
           <ul className="nav-list">
@@ -29,18 +39,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
-        {/* Log in button */}
-        <div>
-          <Link to="/login" className="login-button">Log in</Link>
-        </div>
-        
-        {/* Book Now button */}
-        <div>
-          <Link to="/booking"><button className="Booking">
-            Book Now</button>
-          </Link>
-        </div>
       </div>
     </div>
   );

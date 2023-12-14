@@ -53,35 +53,38 @@ const Homepage = () => {
       <section className="testimonial-container">
         <h2>What Our Patient Say</h2>
 
-        {/* Testimonial 1 */}
-        <div className="testimonial">
-          <p>I am really satisfied to use this app.</p>
-          <div className="rating">★★★★★</div>
-        </div>
+        <div class="testimonial-block">
+          {/* Testimonial 1 */}
+          <div className="testimonial">
+            <p>I am really satisfied to use this app.</p>
+            <div className="rating">★★★★★</div>
+          </div>
 
-        {/* Testimonial 2 */}
-        <div className="testimonial">
-          <p>Very Clean clinic.</p>
-          <div className="rating">★★★★☆</div>
-        </div>
+          {/* Testimonial 2 */}
+          <div className="testimonial">
+            <p>Very Clean clinic.</p>
+            <div className="rating">★★★★☆</div>
+          </div>
 
-        {/* Testimonial 3 */}
-        <div className="testimonial">
-          <p>Skilled team, fantastic experience..</p>
-          <div className="rating">★★★☆☆</div>
-        </div>
+          {/* Testimonial 3 */}
+          <div className="testimonial">
+            <p>Skilled team, fantastic experience..</p>
+            <div className="rating">★★★☆☆</div>
+          </div>
 
-        {/* Testimonial 4 */}
-        <div className="testimonial">
-          <p>Exceptional service, highly recommended.</p>
-          <div className="rating">★★★★★</div>
-        </div>
+          {/* Testimonial 4 */}
+          <div className="testimonial">
+            <p>Exceptional service, highly recommended.</p>
+            <div className="rating">★★★★★</div>
+          </div>
 
-        {/* Testimonial 5 */}
-        <div className="testimonial">
-          <p>Fifth testimonial content.</p>
-          <div className="rating">★★★★★</div>
+          {/* Testimonial 5 */}
+          <div className="testimonial">
+            <p>Fifth testimonial content.</p>
+            <div className="rating">★★★★★</div>
+          </div>
         </div>
+        
       </section>
 
       {/* Star Rating Chart */}

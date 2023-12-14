@@ -8,11 +8,26 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #000000;
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
 }
 
 .about-container {
   width: 80%;
   margin: 0 auto;
+}
+
+.doctor{
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+  margin: 30px 30px 20px;
+  
+}
+
+.doctor img{
+  width: 300px;
 }
 
 .content-box {
@@ -41,11 +56,26 @@ body {
 }
 
 .feature-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  vertical-align: top;
   text-align: center;
-  margin-bottom: 30px;
+  width: 363px;
+  border: 1px solid #000;
+  margin: 0 10px 20px;
+  padding: 10px;
+  min-height: 320px;
+  background-color: #fff;
+}
+
+.feature-list li:hover{
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.3), 0 6px 20px 0 rgb(0, 0, 0, 0.3);
+  transition: .5s ease;
+  background-color: #3498db;
+}
+
+.feature-list li strong{
+  display: block;
+  min-height: 80px;
 }
 
 .feature-list img {

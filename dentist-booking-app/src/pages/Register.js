@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from "../components/header";
 import Footer from "../components/footer";
+import logo from "../images/DentalLogo.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -36,40 +37,32 @@ const Register = () => {
   return (
     <div>
       <Header></Header>
-      <h2>Join us</h2>
-      <h5>Create your personal account</h5>
-      <form onSubmit={handleRegister}>
-        <p>
-          <label>Name</label><br />
-          <input type="text" name="name" required onChange={handleChange} />
-        </p>
-        <p>
-          <label>Email address</label><br />
-          <input type="email" name="email" required onChange={handleChange} />
-        </p>
-        <p>
-          <label>Password</label><br />
-          <input type="password" name="password" required onChange={handleChange} />
-        </p>
-        <p>
-          <input type="checkbox" name="checkbox" id="checkbox" required />{' '}
-          <span>
+      <div class="login-register-bar">
+      <img src={logo} alt="logo" className='logo' />
+        <h1>Join us</h1>
+        <form onSubmit={handleRegister}>
+            <label>Name</label>
+            <input type="text" name="name" required onChange={handleChange} />
+            <label>Email address</label>
+            <input type="email" name="email" required onChange={handleChange} />
+            <label>Password</label>
+            <input type="password" name="password" required onChange={handleChange} />
+            <span>
+            <p>
+            <input type="checkbox" name="checkbox" id="checkbox" required />{' '}
             I agree all statements in{' '}
-            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
-              terms of service
-            </a>
-            .
-          </span>
-        </p>
+              <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                terms of service
+              </a>.
+            </p>
+            </span>
+            <button id="sub_btn" type="submit">Register</button>
+        </form>
         <p>
-          <button id="sub_btn" type="submit">Register</button>
+          Already have an account? <Link to="/login">Click Here</Link>.
         </p>
-      </form>
-      <footer>
-        <p>
-          Already have an account?<Link to="/login">Click Here</Link>.
-        </p>
-      </footer>
+      </div>
+      
       <Footer></Footer>
     </div>
   );
