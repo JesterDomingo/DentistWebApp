@@ -2,12 +2,16 @@ import React from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import '../csspages/Services.css';
+import servicesPageImage from "../images/DentalServices.gif";
+import logo from "../images/DentalLogo.png";
 
 const Services = () => {
   return (
     <div className="services-container">
       <Header />
+      <img src={servicesPageImage} alt="banner about page" className='banner-about' />
       <div className="content-box">
+      <img src={logo} alt="logo" className='logo' />
         <h2 className="section-title">Our Services</h2>
         <p>
           At Smile Reborn Dental Clinic, we offer a comprehensive range of dental services to meet your oral health needs. Our experienced team of dental professionals is dedicated to providing high-quality and personalized care. Explore our services below:

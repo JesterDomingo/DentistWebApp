@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from "../components/header";
 import Footer from "../components/footer";
+import logo from "../images/DentalLogo.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -40,22 +41,23 @@ const Login = () => {
   return (
     <div>
       <Header></Header>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <label>Email:</label>
-        <input type="email" name="email" value={loginUser.email} onChange={handleChange} required />
+      <div class="login-register-bar">
+      <img src={logo} alt="logo" className='logo' />
+        <h1>Login</h1>
+          <form onSubmit={handleLogin}>
+          <label>Email:</label>
+          <input type="email" name="email" value={loginUser.email} onChange={handleChange} required />
 
-        <label>Password:</label>
-        <input type="password" name="password" value={loginUser.password} onChange={handleChange} required />
+          <label>Password:</label>
+          <input type="password" name="password" value={loginUser.password} onChange={handleChange} required />
 
-        <button type="submit">Login</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-      </form>
-      <footer>
+          <button type="submit">Login</button>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          </form>
         <p>
           Don't have an account? <Link to="/signup"> Click Here</Link>.
         </p>
-      </footer>
+      </div>
       <Footer></Footer>
     </div>
   );
