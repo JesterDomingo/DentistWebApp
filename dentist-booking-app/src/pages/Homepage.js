@@ -39,6 +39,7 @@ const Homepage = () => {
 
   return (
     <div>
+<<<<<<< Updated upstream
       <Header />
 
       {/* Banner Section */}
@@ -105,6 +106,17 @@ const Homepage = () => {
         </div>
       </section>
     <Footer></Footer>
+=======
+      <Header></Header>
+      <h2>Homepage</h2>
+      <Link to="/login">
+        <button>Login</button>
+      </Link>
+      <Link to="/contactus">
+        <button>Contact Us</button>
+      </Link>
+      <Footer></Footer>
+>>>>>>> Stashed changes
     </div>
   );
 };
